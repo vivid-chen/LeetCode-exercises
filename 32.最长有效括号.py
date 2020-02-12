@@ -13,7 +13,6 @@
 解释: 最长有效括号子串为 "()()"
 '''
 
-
 # 动态规划 栈
 def longestValidParentheses(s):
     # 初始化栈
