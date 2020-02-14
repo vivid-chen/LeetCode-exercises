@@ -26,4 +26,19 @@ def selectionSort(arr):
         newArr.append(arr.pop(smallest))
     return newArr
 
-print(selectionSort([5, 3, 1, 8, 10, 2]))
+# print(selectionSort([5, 3, 1, 8, 10, 2]))
+
+# 按照大话数据结构里的写法
+def selection_Sort(arr):
+    size = len(arr)
+    for i in range(0,size):
+        min = i # 将i作为初始min值
+        for j in range(i+1,size):
+            if arr[min] > arr[j]: # 如果后面有比min小的就交换
+                min = j
+        if i != min: # 如果找到了更小的就交换i和min下标的元素
+            arr[i],arr[min] = arr[min],arr[i]
+    return arr
+
+print(selection_Sort([9,1,5,8,3,7,4,6,2]))
+
