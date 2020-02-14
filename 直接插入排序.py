@@ -9,7 +9,7 @@ def InsertSort(arr):
             while arr[j] > swap:
                 arr[j+1] = arr[j]
                 j -= 1
-                if j < 0:break # 这里是只有两个元素前大后小的特殊处理
+                if j < 0:break # 这里是前两个元素前大后小的特殊处理
 
             arr[j+1] = swap
 
