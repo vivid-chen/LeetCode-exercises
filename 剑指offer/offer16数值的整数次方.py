@@ -15,4 +15,4 @@ def MyPow(x:float,n:int)->float:
 
     return result
 
-print(MyPow(2,3.5))
+print(MyPow(2,3))
