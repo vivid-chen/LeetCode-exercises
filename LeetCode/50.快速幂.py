@@ -25,6 +25,7 @@ def myPow(x, n):
         if n == 0:return 1
         if n == 1:return x
         if n ==-1:return 1/x
+
         # 这里用尾递归的写法会超出时间限制
         '''
         rest = int(n%2)
@@ -32,9 +33,18 @@ def myPow(x, n):
         return myPow(x, rest)*myPow(x, half)*myPow(x, half)
         '''
         # 老老实实不写成尾递归形式
+        '''
         rest = self.myPow(x, int(n%2))
         half = self.myPow(x, int(n//2))
         return rest*half*half
+        '''
+        # 最优化形式
+        result = myPow(x,n>>1)
+        result *= result
+        if n & 0x1 == 1:
+                result *= x
+        return result
+
 
 
 print(myPow())
