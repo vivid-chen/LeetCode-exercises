@@ -21,4 +21,24 @@ def maxProductAfterCutting_Solution1(length:int)->int:
         products[i] = max
 
     return products[-1]
+
+# 贪婪算法
+def maxProductAfterCutting_Solution2(length:int)->int:
+    if length < 2:
+        return 0
+    if length == 2:
+        return 1
+    if length ==3:
+        return 2
+    
+    TimesOfThree = length//3
+    rest = length%3
+
+    if rest == 1:
+        TimesOfThree -= 1
+        rest = 4
+    return (3**TimesOfThree)*rest
+
+
 print(maxProductAfterCutting_Solution1(8))
+print(maxProductAfterCutting_Solution2(8))
