@@ -2,7 +2,7 @@ class ListNode:
     def __init__(self,x):
         self.val = x
         self.next = None
-'''
+
 # 链表初始化函数
 class LinkList:
     def __init__(self):
@@ -25,7 +25,7 @@ class LinkList:
         while node != None:
             print(node.val,end='')
             node = node.next
-'''
+
 def DeleteNode(l1:ListNode, TobeDelete:ListNode)->ListNode:
     if l1 is None:
         return None
@@ -51,7 +51,7 @@ def DeleteNode(l1:ListNode, TobeDelete:ListNode)->ListNode:
     return l1
 
 if __name__ == '__main__':
-    '''
+    
     # 初始化链表
     data1 = [1, 2, 3, 4]
     l1=LinkList().initList(data1)
@@ -62,11 +62,12 @@ if __name__ == '__main__':
     DeleteNode(l1,l2)
     tmp = l1
     while tmp.next:
-        print(tmp.val)
+        print(tmp.val,end='')
         tmp = tmp.next
     print(tmp.val)
-    '''
+    
 
+    '''
     # 尝试直接初始化链表
     l1 = ListNode(1)
     head = l1
@@ -80,3 +81,4 @@ if __name__ == '__main__':
         print(tmp.val, end=' ')
         tmp = tmp.next
     print(tmp.val)
+    '''
