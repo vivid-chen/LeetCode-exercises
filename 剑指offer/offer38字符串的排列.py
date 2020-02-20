@@ -40,7 +40,6 @@ def dfs(Position,size,Flag,temp,res,string):
 交换位置得到全排列
 '''
 def Repeat(located,P):
-    # global string
     # 如果当前指到的前面出现过就不用考虑了
     for i in range(located,P):
         if string[i] == string[P]:
@@ -48,7 +47,6 @@ def Repeat(located,P):
     return True
 
 def SwapPermutation(n):
-    # global string
     size = len(string)
     if size <= 0:
         return print("Para Error")
@@ -56,19 +54,14 @@ def SwapPermutation(n):
         print(string)
         res.append(string)
         return
-    
     for i in range(n,size):
         if Repeat(n,i):
             # 交换
-            temp = string[n]
-            string[n] = string[i]
-            string[i] = temp
+            string[n],string[i] = string[i],string[n]
             # 递归
             SwapPermutation(n+1)
             # 递归结束后还原
-            temp = string[n]
-            string[n] = string[i]
-            string[i] = temp
+            string[n],string[i] = string[i],string[n]
 
 '''
 字符串组合
@@ -82,7 +75,6 @@ def Combination(li,total,choose,temp,res): # 得到组合
     if choose == 1:
         for i in range(0,total):
             res.append(''.join(temp)+li[i])
-
     else:
         temp.append(li[0])
         # 弹出的属于选择
