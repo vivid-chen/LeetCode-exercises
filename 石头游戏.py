@@ -40,6 +40,10 @@ def StoneGame(piles:list):
 
 
 print(StoneGame([3, 9, 1, 2]))
-print("ok")
+win = StoneGame([3, 9, 1, 2])
+if win > 0:
+    print("Win!")
+else:
+    print("Not win.")
 
 
