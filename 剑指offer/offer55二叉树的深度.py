@@ -65,10 +65,44 @@ def IsBalance(root:TreeNode):
     result,hight = IsBalance_Solution(root,0)
     return result
 
+# 二叉树的前序遍历（非递归）
+def preorder(root:TreeNode):
+    """
+    :type root: TreeNode
+    :rtype: List[int]
+    """
+    res = []
+    stack = [root]
+    while stack:
+        node = stack.pop()
+        if node:
+            res.append(node.val)
+            stack.append(node.right)
+            stack.append(node.left)
+    return res
+# 二叉树的中序遍历（非递归）
+def inorder(root:TreeNode):
+    res = []
+    stack = []
+    pos = root
+    while pos is not None or len(stack) > 0:
+        if pos is not None:
+            stack.append(pos)
+            pos = pos.left
+        else:
+            pos = stack.pop()
+            res.append(pos.val)
+            pos = pos.right
+    return res
+
 
 if __name__ == "__main__":
-    root = tree.build_binary_tree([1,2,3,4,None,None,None,6,None,7])
+    root = tree.build_binary_tree([1,2,3,4,5,6,7])
+    print(preorder(root))
+    print(inorder(root))
+
     print(TreeDepth(root))
     print(IsBalance(root))
+
 
 
