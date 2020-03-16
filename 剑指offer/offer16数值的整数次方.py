@@ -3,10 +3,10 @@ def MyPow(x:float,n:int)->float:
         return 1
     if n == 1:
         return x
-    '''
+    
     if n == -1:
         return 1/x
-    '''
+    
     
     # 这里用移位代替/2
     result = MyPow(x,n>>1)
@@ -17,4 +17,4 @@ def MyPow(x:float,n:int)->float:
 
     return result
 
-print(MyPow(2,3))
+print(MyPow(2,-10))
