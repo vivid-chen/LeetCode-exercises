@@ -17,3 +17,13 @@ for i in s:
     else:
         stack.append(i)
 print("".join(stack))
+
+
+# 字符串去重复
+input = "12ere2"
+
+temp = ""
+for i in input:
+    if i not in temp:
+        temp += i
+print(temp)

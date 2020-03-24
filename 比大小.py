@@ -38,7 +38,8 @@ for string in list[1:num+1]:
 	for i in range(12):
 		count = 0
 		for j in range(i+1,12):
-			if "".join(string)[i ]> "".join(string)[j]:
+			# 后面有比这一位小的就可以排到前面，
+			if "".join(string)[i ] > "".join(string)[j]:
 				count += 1
 		sum += count*arr[11-i]
 	sum += 1    
