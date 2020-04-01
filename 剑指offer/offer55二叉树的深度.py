@@ -122,6 +122,7 @@ if __name__ == "__main__":
     root = tree.build_binary_tree([1,2,3,4,5,6,7])
     print(preorder(root))
     print(inorder(root))
+    print(postOrderTraverse(root))
 
     print(TreeDepth(root))
     print(IsBalance(root))
