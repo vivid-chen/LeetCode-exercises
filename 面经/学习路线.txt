@@ -4,4 +4,4 @@
 
 操作系统（黑书）进程内存和锁部分章节
 
-labuladong的算法小炒
+labuladong的算法小抄
